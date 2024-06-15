@@ -35,10 +35,11 @@
   left: 3%;
   top: 0;
   z-index: 2;
+  transition: transform 0.2s ease-in-out;
 }
 .container-h1:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.02);
   transition: transform 0.2s ease-in-out;
 }
 .container-h1 > a {

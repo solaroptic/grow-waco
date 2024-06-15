@@ -62,6 +62,7 @@ html {
 a {
   text-decoration: none;
   font-size: 2rem;
+  outline: none;
 }
 /* a:hover {
   color: #535bf2;

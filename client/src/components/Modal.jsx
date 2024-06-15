@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useUpdateVotesMutation } from "../api/userApiSlice";
 import { useNotifyProposalClearMutation } from "../api/proposalsApiSlice";
 import { addVote, removeVote, resetVoteArray } from "../utility/userSlice";
-import { proposalsApiSlice } from "../api/proposalsApiSlice.js";
+// import { proposalsApiSlice } from "../api/proposalsApiSlice.js";
 
 const Modal = ({ rowData, setHasNotifications }) => {
   const [isCommenting, setIsCommenting] = useState(false);
@@ -48,19 +48,27 @@ const Modal = ({ rowData, setHasNotifications }) => {
   }, []);
 
   useEffect(() => {
-    if (!user) {
+    if (!user || isChecked === false) {
       return;
     }
-    if (currentVoteArray.length === 1) {
-      toast("Vote added, one more to submit", toastOptions);
+    if (currentVoteArray.length === 1 && isChecked === true) {
+      // toast("Vote added, one more to submit", { ...toastOptions, id: "01" });
+      setTimeout(
+        () =>
+          toast("Vote added, one more to submit", {
+            ...toastOptions,
+            id: "01",
+          }),
+        100
+      );
       return;
     }
-    if (currentVoteArray.length === 2) {
+    if (currentVoteArray.length === 2 && isChecked === true) {
       const payload = {
         userId,
         votesArray: currentVoteArray,
       };
-      toast("Submitting your votes", toastOptions);
+      toast("Submitting your votes", { ...toastOptions, id: "02" });
       mutateVote(payload);
       dispatch(resetVoteArray());
       // dispatch(proposalsApiSlice.util.invalidateTags(["Proposals", "userApi"]));
