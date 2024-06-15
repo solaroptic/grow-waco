@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const proposalsApiSlice = createApi({
   reducerPath: "proposals", //default name is 'api'
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001",
+    baseUrl: "https://grow-waco.onrender.com",
     prepareHeaders: (headers, { getState, endpoint }) => {
       const token = getState().user.token;
       if (token && endpoint !== "addProposalPic") {

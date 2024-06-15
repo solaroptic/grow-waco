@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import path from "path";
 // import morgan from "morgan";
 
 import authRoutes from "./routes/auth.js";
@@ -27,15 +28,15 @@ app.use("/comments", commentsRoutes);
 app.use("/proposals", proposalsRoutes);
 
 // Serve static assets
-// if (process.env.NODE_ENV === "production") {
-//   const __dirname = path.resolve();
-//   app.use(express.static(path.join(__dirname, "frontend/build")));
-//   app.get("*", (req, res) =>
-//     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
-//   );
-// } else {
-//   app.get("/", (req, res) => res.send("server is ready"));
-// }
+if (process.env.NODE_ENV === "production") {
+  const __dirname = path.resolve();
+  app.use(express.static(path.join(__dirname, "../client/dist")));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "..", "client", "dist", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => res.send("server is ready"));
+}
 
 // MongoDB/Mongoose Setup
 

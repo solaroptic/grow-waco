@@ -9,7 +9,7 @@ export const getTokens = () => {
 export const commentsApiSlice = createApi({
   reducerPath: "comments",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001",
+    baseUrl: "https://grow-waco.onrender.com",
     credentials: "include",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().user.token;

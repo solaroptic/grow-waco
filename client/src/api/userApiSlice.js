@@ -4,7 +4,7 @@ import { proposalsApiSlice } from "../api/proposalsApiSlice.js";
 export const userApiSlice = createApi({
   reducerPath: "userApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001",
+    baseUrl: "https://grow-waco.onrender.com",
     credentials: "include",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().user.token;
