@@ -6,12 +6,12 @@ import Schedule from "./views/Schedule";
 import Proposal from "./views/Proposal";
 import UserStats from "./views/UserStats";
 import EmailVerify from "./components/EmailVerify";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <Router>
       <Routes>
-        <Toaster />
+        {/* <Toaster /> */}
         <Route path="/" exact element={<Landing />}>
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />

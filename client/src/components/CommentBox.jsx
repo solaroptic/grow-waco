@@ -41,7 +41,7 @@ const CommentBox = ({ proposalId }) => {
   };
   return (
     <div className={styles["comments-container-div"]}>
-      {/* <Toaster /> */}
+      <Toaster />
       {data?.map((comment) => (
         <div
           className={styles["singleComment-container-div"]}
