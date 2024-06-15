@@ -1,0 +1,161 @@
+.modal-container-div {
+  position: absolute;
+  z-index: 3;
+  margin-top: -2rem;
+  background-color: var(--almostWhite);
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem clamp(1rem, 1rem + 0vw, 1rem);
+  bottom: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.modal-container-div h2 {
+  color: var(--tertiary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+hr {
+  margin-bottom: 1.25rem;
+}
+.leaveComment-p {
+  text-align: end;
+  cursor: pointer;
+  color: var(--tertiary);
+  text-decoration: underline;
+  font-size: clamp(1.7rem, 1.8571rem + 0.9524vw, 3rem);
+  margin-bottom: 1rem;
+}
+.exit-icon {
+  color: var(--tertiary);
+  font-size: var(--titleFont);
+  cursor: pointer;
+}
+.date-p {
+  text-align: end;
+  font-size: var(--smallestFont);
+  margin-top: 2rem;
+}
+.name-vote-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.name-span {
+  align-self: center;
+  padding-left: 0.5rem;
+  font-size: clamp(2.2rem, 1.8571rem + 0.9524vw, 3rem);
+}
+.details-h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.proposal-icon {
+  height: 8rem;
+  margin-top: -2rem;
+}
+.proposal-description {
+  font-size: clamp(2.2rem, 1.8571rem + 0.9524vw, 3rem);
+}
+.checkbox-wrapper-div .checkbox-container-label input {
+  opacity: 1;
+  appearance: none;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  box-shadow: -10px -10px 15px rgba(225, 255, 225, 0.5),
+    10px 10px 15px rgba(0, 35, 70, 0.12);
+  border-radius: 50%;
+  border: 6px solid var(--tertiaryTrans);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  transition: 0.3s ease;
+}
+
+.checkbox-wrapper-div .checkbox-container-label {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.checkbox-wrapper-div .checkbox-container-label input::after {
+  transition: 0.5s;
+  font-family: monospace;
+  content: "";
+  color: #7a7a7a;
+  font-size: 25px;
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #7a7a7a;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper-div .checkbox-container-label input:checked {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+  transition: 0.5s;
+  border: 6px solid var(--tertiary);
+}
+
+.checkbox-wrapper-div .checkbox-container-label input:checked::after {
+  transition: 0.5s;
+  border: solid var(--secondary);
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.checkbox-wrapper-div .checkbox-container-label input:hover {
+  filter: drop-shadow(-5px 5px 2px rgba(16, 16, 200, 0.75));
+  transform: scale(1.05);
+}
+.checkbox-vote {
+  margin-left: 1.6rem;
+  font-size: clamp(2.2rem, 1.8571rem + 0.9524vw, 3rem);
+}
+
+.checkbox-voted {
+  color: var(--tertiary);
+}
+.checkbox-voted::after {
+  content: "d";
+}
+
+.checkbox-vote-not::after {
+  color: transparent;
+  content: "d";
+}
+.proposal-visuals-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.proposal-visuals-div h3 {
+  font-size: clamp(2.2rem, 1.8571rem + 0.9524vw, 3rem);
+}
+.proposal-image {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-top: 1.3rem;
+}
+@media (max-width: 768px) {
+  .modal-container-div {
+    scrollbar-width: none;
+  }
+  .name-span {
+    align-self: center;
+  }
+  .proposal-icon {
+    height: 5.5rem;
+    margin-top: 0rem;
+  }
+}

@@ -1,0 +1,82 @@
+.comments-container-div {
+  text-align: left;
+  font-size: var(--smallestFont);
+}
+.singleComment-container-div {
+  margin-bottom: 2.4rem;
+  font-size: clamp(1.3rem, 1.0571rem + 0.5357vw, 1.7rem);
+}
+.comment-info-div {
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem 0;
+}
+.comment-content-p,
+.comment-edit-input {
+  background-color: var(--glow);
+  border-radius: 12px;
+  display: inline-block;
+  padding: 1rem;
+}
+.comment-edit-input {
+  width: 100%;
+}
+.comment-like-p {
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--tertiary);
+}
+.comment-like-count-p {
+  color: var(--primary);
+}
+.comment-liked {
+  color: var(--primary);
+}
+.comment-liked::after {
+  content: "d ✔";
+}
+.comment-time-p {
+  font-size: 0.8rem;
+  align-self: center;
+  margin-top: 0.45rem;
+}
+.comment-edit-icon,
+.comment-delete-icon {
+  cursor: pointer;
+  fill: var(--tertiary);
+}
+.comment-edit-icon {
+  margin-left: auto;
+}
+.comment-delete-icon {
+  margin-left: 0.5rem;
+}
+
+.leaveComment-container-div {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  margin: 1.6rem 0 5rem 0;
+}
+.leaveComment-input {
+  width: 100%;
+  height: 3.4rem;
+  padding-left: 0.5rem;
+}
+.leaveComment-section {
+  position: absolute;
+  display: flex;
+  background-color: var(--tertiary);
+  gap: 3rem;
+  bottom: -4.3rem;
+  right: 0;
+  border-radius: 0.8rem;
+}
+.leaveComment-button {
+  color: var(--white);
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: clamp(2.2rem, 1.8571rem + 0.9524vw, 3rem);
+}

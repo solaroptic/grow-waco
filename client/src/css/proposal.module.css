@@ -1,0 +1,60 @@
+.proposal-container {
+  background-color: var(--secondaryTrans);
+  height: calc(100vh - 16rem);
+  width: clamp(34rem, 14.0714rem + 55.3571vw, 80.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  border-radius: 3rem;
+  border: 2px solid var(--secondary);
+  z-index: 2;
+}
+.proposal-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* margin: clamp(2.2rem, 1.4286rem + 2.1429vw, 4rem) auto; */
+  width: clamp(100%, 125.7143rem + -71.4286vw, 40rem);
+  color: var(--primary);
+}
+.proposal-labels {
+  padding-left: 1rem;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.proposal-inputs,
+.proposal-textInput {
+  border-radius: 9px;
+  background-color: var(--white);
+  border: none;
+  padding: clamp(1rem, 0.5714rem + 1.1905vw, 2rem);
+  font-size: 1.6rem;
+  width: clamp(28rem, 18.5714rem + 17.8571vw, 40rem);
+  margin: 0 auto;
+}
+.propose-button {
+  margin: 10rem auto;
+  text-align: center;
+}
+.propose-button:hover {
+  background: var(--secondary);
+  color: var(--almostWhite);
+  border-color: var(--tertiary);
+}
+.proposal-inputs {
+  height: 4rem;
+}
+.proposal-h2 {
+  font-size: clamp(2rem, 1.0857rem + 1.4286vw, 3.6rem);
+}
+.file-input {
+  margin: 2rem auto;
+}
+@media (max-width: 768px) {
+  .proposal-container {
+    scrollbar-width: none;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Grow Waco",
+  "short_name": "Grow Waco",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#4cb944",
+  "background_color": "#246eb9",
+  "display": "standalone"
+}
