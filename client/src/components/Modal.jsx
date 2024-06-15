@@ -92,7 +92,7 @@ const Modal = ({ rowData, setHasNotifications }) => {
   };
   return (
     <div className={styles["modal-container-div"]}>
-      <Toaster />
+      {/* <Toaster /> */}
       <h2>{rowData.title} </h2>
       <div className={styles["name-vote-div"]}>
         <p className={styles["name-span"]}>{rowData.userName}</p>
