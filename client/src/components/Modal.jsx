@@ -52,7 +52,7 @@ const Modal = ({ rowData, setHasNotifications }) => {
       return;
     }
     if (currentVoteArray.length === 1) {
-      toast("One more vote to submit", toastOptions);
+      toast("Vote added, one more to submit", toastOptions);
       return;
     }
     if (currentVoteArray.length === 2) {
@@ -75,11 +75,11 @@ const Modal = ({ rowData, setHasNotifications }) => {
     }
     if (e.target.checked && currentVoteArray[0] !== proposalId) {
       dispatch(addVote(proposalId));
-      toast("Vote added", toastOptions);
+      // toast("Vote added", toastOptions);
     }
     if (e.target.checked === false) {
       dispatch(removeVote(proposalId));
-      toast("Vote removed", toastOptions);
+      // toast("Vote removed", toastOptions);
     }
   };
   return (

@@ -5,7 +5,7 @@
   background-color: var(--almostWhite);
   height: 100%;
   width: 100%;
-  padding: 1.5rem clamp(1rem, 1rem + 0vw, 1rem);
+  padding: 1.5rem clamp(1rem, 0.3571rem + 1.7857vw, 2.5rem);
   bottom: 0;
   overflow-y: auto;
   scrollbar-width: thin;

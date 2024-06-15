@@ -7,20 +7,10 @@ const About = () => {
       <div className={styles["about-container-div"]}>
         <img className={styles["bridge"]} src={bridge} alt="bridge" />
         <h2>Mission of Grow Waco</h2>
-
         <p>
           To provide an informal bridge between the people of this town and it's
-          government
-        </p>
-
-        <p>
-          A dedicated virtual suggestion box to allow us to impart some of our
-          collective personality into Waco
-        </p>
-        <p>
-          To provide a uniquely positioned window for city council on some of
-          the views and concerns of the community that aren't always reflected
-          in City Hall discussions
+          government via dedicated virtual suggestion box to impart some of our
+          collective personality into City Hall discussions
         </p>
         <h3>How it works</h3>
         <p>

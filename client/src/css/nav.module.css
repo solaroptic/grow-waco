@@ -36,6 +36,11 @@
   top: 0;
   z-index: 2;
 }
+.container-h1:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
 .container-h1 > a {
   font-size: clamp(3.75rem, 0.6851rem + 8.7234vw, 8.1rem);
   outline: none;
