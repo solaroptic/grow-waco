@@ -10,7 +10,7 @@ const EmailVerify = () => {
     const verifyEmail = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/auth/${param.id}/verify/${param.token}`,
+          `https://grow-waco.onrender.com/auth/${param.id}/verify/${param.token}`,
           {
             method: "POST",
             credentials: "include",
@@ -28,8 +28,6 @@ const EmailVerify = () => {
         setIsVerified(false);
       }
     };
-    // ///////////////////////////////
-    // Uncomment the line below to verify
     verifyEmail();
   }, [param]);
 

@@ -6,6 +6,8 @@ This project was designed to offer the city of Waco the opportunity to have a so
 
 Additionally, I learned:
 
+- Sending authentication emails. A new frontier for me and a critical step for authentication.
+
 - better server-side code and error checking
 
 - react-table - A very different take on setting up a table in react, quite handy after the setup
@@ -20,9 +22,9 @@ Additionally, I learned:
 
 ## Growing the Community and Networking
 
-The next step will be to condense my css into a smaller bundle. I intentionally "overbuilt" it to handle some of my experimentation.
+I experimented using a generic class for handling similar blocks of css in different pages using one class for many. I will create css variables/mixins to simplify the css further.
 
-I also look forward to taking suggestions from users and adding features, like perhaps user photos.
+I also look forward to taking suggestions from users and adding features, like perhaps user photos, badges, or city feedback.
 
 ## Growing the Community and Networking
 
@@ -36,7 +38,7 @@ It features:
 
 - RTK for reduced redundancy and updating data on the fly
 
-- Legitimate authorization and HTML validation
+- Legitimate authorization, email authentication, and HTML validation
 
 - Images for plans uploadable through Cloudinary
 
