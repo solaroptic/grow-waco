@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 const EmailVerify = () => {
   const [isVerified, setIsVerified] = useState(false);
   const param = useParams();
-
+  console.log(param);
   useEffect(() => {
     const verifyEmail = async () => {
       try {
@@ -20,6 +20,7 @@ const EmailVerify = () => {
           }
         );
         const data = await response.json();
+        console.log(data);
         if (data.message === "Email verified") {
           setIsVerified(true);
         }

@@ -28,6 +28,7 @@ export const register = async (req, res) => {
       userId: savedUser._id,
       token: crypto.randomBytes(32).toString("hex"),
     }).save();
+    console.log("🚀 ~ file: auth.js ~ line 41 ~ register ~ token", token);
 
     const url = `${process.env.BASE_URL}/auth/${savedUser._id}/verify/${token.token}`;
     await sendEmail(savedUser.email, "Email Verification", url);
@@ -76,13 +77,16 @@ export const login = async (req, res) => {
 
 export const verify = async (req, res) => {
   try {
+    console.log("🧨", req.params.id, req.params.token);
     const user = await User.findById(req.params.id);
     if (!user) return res.status(400).json({ message: "Invalid link" });
+
     const token = await Token.findOne({
       userId: user._id,
       token: req.params.token,
     });
     if (!token) return res.status(400).json({ message: "Invalid token" });
+
     await User.findByIdAndUpdate(
       { _id: user._id },
       { $set: { verified: true } }
