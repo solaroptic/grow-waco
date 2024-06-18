@@ -9,7 +9,7 @@ const Footer = () => {
       <Link to="https://www.facebook.com/profile.php?id=100069234258991">
         <FaFacebookSquare />
       </Link>
-      <Link to="https://www.linkedin.com/in/john-fabiszewski-00b8322a9?trk=public_post_comment_actor-image">
+      <Link to="https://www.linkedin.com/in/john-fabiszewski-00b8322a9">
         <FaLinkedin />
       </Link>
       <Link>solar-optic &copy; 2024</Link>
