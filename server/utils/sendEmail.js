@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 export const sendEmail = async (email, subject, URL_text) => {
-  const resend = new Resend("re_PL8NGUqp_9UPADAssapGRFGJKBLdwnvxv");
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     await resend.emails.send({
       from: "accounts@growwaco.org",
